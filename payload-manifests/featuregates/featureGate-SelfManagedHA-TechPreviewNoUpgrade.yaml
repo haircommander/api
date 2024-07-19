@@ -186,6 +186,9 @@
                         "name": "PrivateHostedZoneAWS"
                     },
                     {
+                        "name": "ProcMountType"
+                    },
+                    {
                         "name": "RouteExternalCertificate"
                     },
                     {
