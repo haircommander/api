@@ -2087,20 +2087,13 @@ func (NodeList) SwaggerDoc() map[string]string {
 }
 
 var map_NodeSpec = map[string]string{
-	"cgroupMode":           "CgroupMode determines the cgroups version on the node",
-	"workerLatencyProfile": "WorkerLatencyProfile determins the how fast the kubelet is updating the status and corresponding reaction of the cluster",
+	"cgroupMode":            "CgroupMode determines the cgroups version on the node",
+	"workerLatencyProfile":  "WorkerLatencyProfile determins the how fast the kubelet is updating the status and corresponding reaction of the cluster",
+	"minimumKubeletVersion": "MinimumKubeletVersion is the lowest version of a kubelet that can join the cluster. Specifically, the apiserver will deny any authorization requests of kubelets that are older than the specified version.",
 }
 
 func (NodeSpec) SwaggerDoc() map[string]string {
 	return map_NodeSpec
-}
-
-var map_NodeStatus = map[string]string{
-	"conditions": "conditions contain the details and the current state of the nodes.config object",
-}
-
-func (NodeStatus) SwaggerDoc() map[string]string {
-	return map_NodeStatus
 }
 
 var map_BasicAuthIdentityProvider = map[string]string{

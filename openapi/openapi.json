@@ -8263,6 +8263,10 @@
           "description": "CgroupMode determines the cgroups version on the node",
           "type": "string"
         },
+        "minimumKubeletVersion": {
+          "description": "MinimumKubeletVersion is the lowest version of a kubelet that can join the cluster. Specifically, the apiserver will deny any authorization requests of kubelets that are older than the specified version.",
+          "type": "string"
+        },
         "workerLatencyProfile": {
           "description": "WorkerLatencyProfile determins the how fast the kubelet is updating the status and corresponding reaction of the cluster",
           "type": "string"
@@ -8270,23 +8274,7 @@
       }
     },
     "com.github.openshift.api.config.v1.NodeStatus": {
-      "type": "object",
-      "properties": {
-        "conditions": {
-          "description": "conditions contain the details and the current state of the nodes.config object",
-          "type": "array",
-          "items": {
-            "default": {},
-            "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Condition"
-          },
-          "x-kubernetes-list-map-keys": [
-            "type"
-          ],
-          "x-kubernetes-list-type": "map",
-          "x-kubernetes-patch-merge-key": "type",
-          "x-kubernetes-patch-strategy": "merge"
-        }
-      }
+      "type": "object"
     },
     "com.github.openshift.api.config.v1.NutanixFailureDomain": {
       "description": "NutanixFailureDomain configures failure domain information for the Nutanix platform.",
