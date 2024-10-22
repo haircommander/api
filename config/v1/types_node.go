@@ -51,6 +51,7 @@ type NodeSpec struct {
 	// Specifically, the apiserver will deny (most) authorization requests of kubelets that are older
 	// than the specified version.
 	// +kubebuilder:validation:Pattern=`^[0-9]*\.[0-9]*\.[0-9]*$`
+	// +openshift:enable:FeatureGate=MinimumKubeletVersion
 	// +optional
 	MinimumKubeletVersion string `json:"minimumKubeletVersion,omitempty"`
 }

@@ -66,6 +66,7 @@ type KubeAPIServerConfig struct {
 	// MinimumKubeletVersion is the lowest version of a kubelet that can meaningfully join the cluster.
 	// Specifically, the apiserver will deny (most) authorization requests of kubelets that are older
 	// than the specified version.
+	// +openshift:enable:FeatureGate=MinimumKubeletVersion
 	MinimumKubeletVersion string `json:"minimumKubeletVersion,omitempty"`
 }
 
